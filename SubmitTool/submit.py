@@ -29,11 +29,21 @@ EXENAME CARD OUTPUT FIRSTEVENT LASTEVENT INPUT
 templateCONDORsub = """
 universe                = vanilla
 executable              = $(filename)
+should_transfer_files = YES 
+when_to_transfer_output = ON_EXIT
+getenv = TRUE
+request_cpus = 1 
+request_disk = 8000000
+request_memory = 1024
+use_x509userproxy = true
 output                  = LOGLOCATION/$(ClusterId).$(ProcId).out
 error                   = LOGLOCATION/$(ClusterId).$(ProcId).err
 log                     = LOGLOCATION/$(ClusterId).log
-Notify_user             = pablom@cern.ch
-+JobFlavour = "QUEUE" 
++ProjectName = "PCFOSGUCSD"
++local = FALSE
++site_local = TRUE
++sdsc = FALSE
++uc = TRUE
 queue filename matching (NAMEOFFILES)
 """
 
