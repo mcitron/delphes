@@ -148,7 +148,7 @@ module PileUpMerger PileUpMerger {
   set dzPileUp 1.0
  
   # radius of the magnetic field coverage, in m
-  set Radius 1.29
+  set Radius 1.25
   # half-length of the magnetic field coverage, in m
   set HalfLength 3.0
 
